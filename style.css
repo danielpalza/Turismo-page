@@ -13,7 +13,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 200vh;
+    height: auto;
     background: linear-gradient(black, rgb(70, 69, 69));
 }
 
@@ -269,5 +269,40 @@ h2{
     
 }
 
+/*Footer*/
+footer{
+    margin-top:5vh ;
+    display: flex;
+    height: 40vh;
+    width: 80%;
+    
+    justify-content: space-around;
+}
+#button{
+    
+    
+    width: 150px;
+    height: 150px;
+    display:block;
+    cursor: pointer;
+    z-index: 80;
+    transition: .5s;
+    border-radius: 50%;
+    box-shadow: -5px -5px 0px 4px rgba(36, 33, 33, 0.747);
+}
+#button:hover{
+    transform:scale(1.1);
+    box-shadow: 5px 5px 0px 4px rgba(49, 46, 46, 0.658);
+}
+#copy{
+    font-family: 'Montserrat';
+    font-size: 2vw;
+    
+}
+#cop{
+    margin: 5vw;
+    display:flex;
+    align-items: center;
+}
 
 

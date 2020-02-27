@@ -13,8 +13,8 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(#A1C6EA, #BBD1EA);
+    height: 200vh;
+    background: linear-gradient(black, rgb(70, 69, 69));
 }
 
 /*------------------Cabecera: botonera y slider-----------------------------------------------*/
@@ -144,7 +144,7 @@ h1{
 /*--------Botonera*/
 
 #botonera{
-    
+    z-index: 50;
     padding: 0;
     margin:0;
      width:80%;
@@ -199,38 +199,75 @@ h1{
 /*Main:contenido*/
 
 /*titulo*/
-main{ 
+main{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     display: flex;
-    position: relative;
-    margin:20px;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
+
 h2{
-    position: absolute;
+    
     font-size: 5vw;
     font-family: 'Gloria Hallelujah' ;
     color:white;
     -webkit-text-stroke:1px black;
+    top:0;
+    z-index: 45;
 
 }
 /*Cuadros*/
-main > ul{
-   display:flex;
-    padding:10px;
+#contenido{
+    display: flex;
+    height: 60vh;
+    
     
 }
-#cuadro{
-    display:block;
-    margin-top:6vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    height:40vw;
-    overflow:hidden;
-    width: 24vw;
+#contenido > li{
+    overflow: hidden;
+}
+#contenido > li>img{
+    width: 26vw;
+    height: 60vh;
+    transition: 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    overflow: hidden;
+   
+
+}
+#pantalla{
+    position: absolute;
+    background-color: transparent;
+    width: 26vw;
+    height: 60vh;
+    z-index: 60;
+
+}
+
+#contenido > li> #pantalla:hover ~img{
+    transform: scale(1.1);
+}
+
+#contenido > li >span {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.562);
+    font-size: 3vw;
+    height: 45%;
+    width: 100%;
+    font-family: 'Gloria Hallelujah' ;
+    transition: 0.4s;
+    color:rgba(255, 255, 255, 0.808);
+    transition: 0.2;
+
+}
+#contenido > li >span > p{
+    font-size: 0.8vw;
+}
+#contenido > li> img:hover ~ span{
+    transform: scale(1.2) translateY(-150px) ;
+    
     
 }
-#cuadro > img{
-    height:40vw;
-    
-    width: 25vw;
-}
+
+
+
